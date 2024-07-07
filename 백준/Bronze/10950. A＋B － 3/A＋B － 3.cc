@@ -1,15 +1,24 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int main() {
-
-    int t;
+int main()
+{
+    int count;
     int a, b;
-    cin >> t;
+    cin >> count;
 
-    for (int i = 0; i < t; i++) {
+    vector<int> result(count);
+
+    for (int i = 0; i < count; i++)
+    {
         cin >> a >> b;
-        cout << a + b << '\n';
+        result[i] = a + b;
+    }
+
+    for (int j = 0; j < count; j++)
+    {
+        cout << result[j] << endl;
     }
 
     return 0;
